@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Freelancer - Start Bootstrap Theme</title>
+    <title>Domain - Innovation Day November</title>
 
     <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -54,13 +54,19 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#portfolio">Portfolio</a>
+                        <a href="#contact">Submit</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#about">About</a>
+                        <a href="#about">Info</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#contact">Contact</a>
+                        <a href="#portfolio">Ideas</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#prizes">Prizes</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#camp">Code Camp</a>
                     </li>
                 </ul>
             </div>
@@ -85,12 +91,112 @@
       </div>
   </header>
 
+    <?php
+  $servername = "localhost";
+  $username = "root";
+  $password = "root";
+
+  // Create connection
+  $conn = new mysqli($servername, $username, $password);
+
+  // Check connection
+  if ($conn->connect_error) {
+      die("Connection failed: " . $conn->connect_error);
+  }
+  echo "Connected successfully"; ?>
+  <!-- Contact Section -->
+  <section id="contact">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12 text-center">
+                  <h2>Submit Idea</h2>
+                  <hr class="star-primary">
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-lg-8 col-lg-offset-2 text-center">
+                  <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-lg-8 col-lg-offset-2 contact-form">
+                  <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+                  <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+                  <form name="sentMessage" id="contactForm" novalidate>
+                      <div class="row control-group">
+                          <div class="form-group col-xs-12 floating-label-form-group controls">
+                              <label>Project Title</label>
+                              <input type="text" class="form-control" placeholder="Project Title" id="name" required data-validation-required-message="Please enter your project name.">
+                              <p class="help-block text-danger"></p>
+                          </div>
+                      </div>
+                      <div class="row control-group">
+                          <div class="form-group col-xs-12 floating-label-form-group controls">
+                              <label>Name</label>
+                              <input type="text" class="form-control" placeholder="Your Name" id="phone" required data-validation-required-message="Please enter your name.">
+                              <p class="help-block text-danger"></p>
+                          </div>
+                      </div>
+                        <div class="row control-group">
+                          <div class="form-group col-xs-12 floating-label-form-group controls">
+                              <label>Your Email Address</label>
+                              <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
+                              <p class="help-block text-danger"></p>
+                          </div>
+                      </div>
+                      <div class="row control-group">
+                          <div class="form-group col-xs-12 floating-label-form-group controls">
+                              <label>Description</label>
+                              <textarea rows="5" class="form-control" placeholder="Description" id="message" required data-validation-required-message="Please enter a description for your project."></textarea>
+                              <p class="help-block text-danger"></p>
+                          </div>
+                      </div>
+                      <br>
+                      <div id="success"></div>
+                      <div class="row">
+                          <div class="form-group col-xs-12">
+                              <button type="submit" class="btn btn-success btn-lg">Send</button>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </section>
+
+
+    <!-- About Section -->
+    <section class="success" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>About</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-2">
+                    <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
+                </div>
+                <div class="col-lg-4">
+                    <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <a href="#" class="btn btn-lg btn-outline">
+                        <i class="fa fa-download"></i> Download Theme
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <!-- Portfolio Grid Section -->
     <section id="portfolio">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Portfolio</h2>
+                    <h2>Ideas</h2>
                     <hr class="star-primary">
                 </div>
             </div>
@@ -160,12 +266,40 @@
     </section>
 
     <!-- About Section -->
-    <section class="success" id="about">
+    <section class="success" id="prizes">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>About</h2>
+                    <h2>Prizes</h2>
                     <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <div class="text-center">
+                  <div class="col-md-4">
+                      <h3>Best Technical Achievement</h3>
+                      <p>Increased throughput, tighter compression ratios, faster load times and annialating bottlenecks. This is the covetted geeks award.</p>
+                  </div>
+                  <div class="col-md-4">
+                      <h3>Most Popular</h3>
+                      <p>The power to the people for the people. The crowd casts their votes, may the best project win.</p>
+                  </div>
+                  <div class="col-md-4">
+                      <h3>Design award</h3>
+                      <p>Who doesn't like a bit of eye candy? An award to the aesthetics and usability</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Code Camp Section -->
+    <section id="camp">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Code Camp</h2>
+                    <hr class="star-primary">
                 </div>
             </div>
             <div class="row">
@@ -184,93 +318,18 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Contact Me</h2>
-                    <hr class="star-primary">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-                    <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-                    <form name="sentMessage" id="contactForm" novalidate>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Name</label>
-                                <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Email Address</label>
-                                <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Phone Number</label>
-                                <input type="tel" class="form-control" placeholder="Phone Number" id="phone" required data-validation-required-message="Please enter your phone number.">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Message</label>
-                                <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <br>
-                        <div id="success"></div>
-                        <div class="row">
-                            <div class="form-group col-xs-12">
-                                <button type="submit" class="btn btn-success btn-lg">Send</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer class="text-center">
         <div class="footer-above">
             <div class="container">
                 <div class="row">
                     <div class="footer-col col-md-4">
-                        <h3>Location</h3>
-                        <p>3481 Melrose Place<br>Beverly Hills, CA 90210</p>
+                        <h3>Key Dates</h3>
+                        <p>7 Nov - Pitch Session<br/>16-17 Nov - Hack Days<br>12 Nov - Presentation<br>12 12-2PM Nov - Lunch</p>
                     </div>
                     <div class="footer-col col-md-4">
-                        <h3>Around the Web</h3>
-                        <ul class="list-inline">
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <h3>About Freelancer</h3>
-                        <p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+                        <h3>Contact Us</h3>
+                        <p>If you have any other questions send us an <a href="mailto:gary.lo@domain.com.au">email</a>.</p>
                     </div>
                 </div>
             </div>
@@ -279,7 +338,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        Copyright &copy; Your Website 2014
+                        Copyright &copy; Gazza 2014
                     </div>
                 </div>
             </div>
@@ -292,45 +351,33 @@
             <i class="fa fa-chevron-up"></i>
         </a>
     </div>
-
     <!-- Portfolio Modals -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/cabin.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<?php
+
+    function writeIdea($title,$description, $name, $email, $index) {
+      echo "$fname Refsnes. Born in $year <br/>";
+      echo "<div class=\"portfolio-modal modal fade\" id=\"portfolioModal1\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\"> <div class=\"modal-content\"> <div class=\"close-modal\" data-dismiss=\"modal\"> <div class=\"lr\"> <div class=\"rl\"> </div> </div> </div> <div class=\"container\"> <div class=\"row\"> <div class=\"col-lg-8 col-lg-offset-2\"> <div class=\"modal-body\"> <h2>Project Title</h2> <hr class=\"star-primary\"> <img src=\"img/portfolio/cabin.png\" class=\"img-responsive img-centered\" alt=\"\"> <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href=\"https://sellfy.com/p/8Q9P/jV3VZ/\">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p> <ul class=\"list-inline item-details\"> <li>Client: <strong><a href=\"http://startbootstrap.com\">Start Bootstrap</a> </strong> </li> <li>Date: <strong><a href=\"http://startbootstrap.com\">April 2014</a> </strong> </li> <li>Service: <strong><a href=\"http://startbootstrap.com\">Web Development</a> </strong> </li> </ul> <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\"><i class=\"fa fa-times\"></i> Close</button> </div> </div> </div> </div> </div> </div>\"<div class=\"portfolio-modal modal fade\" id=\"portfolioModal1\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\"> <div class=\"modal-content\"> <div class=\"close-modal\" data-dismiss=\"modal\"> <div class=\"lr\"> <div class=\"rl\"> </div> </div> </div> <div class=\"container\"> <div class=\"row\"> <div class=\"col-lg-8 col-lg-offset-2\"> <div class=\"modal-body\"> <h2>Project Title</h2> <hr class=\"star-primary\"> <img src=\"img/portfolio/cabin.png\" class=\"img-responsive img-centered\" alt=\"\"> <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href=\"https://sellfy.com/p/8Q9P/jV3VZ/\">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p> <ul class=\"list-inline item-details\"> <li>Client: <strong><a href=\"http://startbootstrap.com\">Start Bootstrap</a> </strong> </li> <li>Date: <strong><a href=\"http://startbootstrap.com\">April 2014</a> </strong> </li> <li>Service: <strong><a href=\"http://startbootstrap.com\">Web Development</a> </strong> </li> </ul> <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\"><i class=\"fa fa-times\"></i> Close</button> </div> </div> </div> </div> </div> </div>\"";
+
+    }
+
+    $sql = "SELECT title, name, email, description FROM innovation_schema.ideas";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+            echo "<b>";
+            echo "id: " . $row["description"]. " - Name: " . $row["name"]. " " . $row["email"]. "<br>";
+            echo "</b>";
+        }
+    } else {
+        echo "0 results";
+    }
+
+
+    writeIdea("", "", "", "", "")
+
+    ?>
     <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
